@@ -1,0 +1,34 @@
+﻿@model Meyawo.Models.TblContact
+@{
+    ViewBag.Title = "DetailMessage";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Mesaj Detay</h2>
+
+<form>
+
+    <label>ID</label>
+    <input type="text" class="form-control border" value="@Model.ContactID" disabled />
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control border" value="@Model.SendDate" disabled />
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" class="form-control border" value="@Model.NameSurname" disabled />
+    <br />
+    <label>E-mail</label>
+    <input type="text" class="form-control border" value="@Model.Email" disabled />
+    <br />
+    <label>Mesaj Kategorisi</label>
+    <input type="text" class="form-control border" value="@Model.MessageCategory" disabled />
+    <br />
+    <label>Mesaj</label>
+    <textarea rows="4" class="table table-bordered" disabled>@Model.Message</textarea>
+    <br />
+    <label>Okundu</label>
+    <input type="text" class="form-control border" value="@Model.IsRead.ToString()" disabled />
+    <br />
+    <a href="/Contact/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>

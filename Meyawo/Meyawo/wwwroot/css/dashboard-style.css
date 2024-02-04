@@ -1,0 +1,40 @@
+body {
+}
+
+
+.widget-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.widget {
+    width: 100%;
+    height: 250px;
+    border-radius: 50px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    position:relative;
+}
+.widget-number {
+    font-size: 100px;
+    color: #fff;
+}
+.widget-i {
+
+}
+.widget-i i {
+    font-size:100px;
+    color: #fff;
+    opacity:.4;
+}
+.widget-name {
+    position:absolute;
+    color:#fff;
+    bottom:10px;
+    font-size:30px;
+    font-weight:600;
+    opacity:.8;
+}

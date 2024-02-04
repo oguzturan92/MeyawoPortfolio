@@ -1,0 +1,21 @@
+﻿@model Meyawo.Models.TblCategory
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Kategori Düzenle</h2>
+
+<form method="post">
+
+    <label>Kategori ID</label>
+    <input type="text" name="CategoryID" class="form-control border" value="@Model.CategoryID" disabled />
+    <input type="hidden" name="CategoryID" value="@Model.CategoryID" />
+    <br />
+    <label>Kategori Adı</label>
+    <input type="text" name="CategoryName" class="form-control border" value="@Model.CategoryName" />
+    <br />
+    <button class="btn btn-info">Kategori Güncelle</button>
+    <a href="/Category/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>

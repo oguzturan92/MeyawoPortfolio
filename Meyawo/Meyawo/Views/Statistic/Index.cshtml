@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>İstatistikler</h2>
+
+<div class="alert alert-danger">Kategori Sayısı : @ViewBag.categoriCount</div>
+<div class="alert alert-warning">Proje Sayısı : @ViewBag.projectCount</div>
+<div class="alert alert-info">Mesaj Sayısı : @ViewBag.messageCount</div>
+<div class="alert alert-dark">Flutter Proje Sayısı : @ViewBag.flutterProjectCount</div>
+<div class="alert alert-primary">Okunmamış Mesaj Sayısı : @ViewBag.isReadMessageCount</div>
+<div class="alert alert-success">Son Proje Adı : @ViewBag.lastPorjectName</div>
+<div class="alert alert-danger">Hizmetlerim Sayısı : @ViewBag.servicesCount</div>
+<div class="alert alert-warning">1.Sıra Kategorisi : @ViewBag.firstCategory</div>
+<div class="alert alert-info">Aktif Referanslardan İlki : @ViewBag.activeTestimonial</div>
+<div class="alert alert-dark">Alanım : @ViewBag.headerTitle</div>
+<div class="alert alert-success">Son Eklenen Proje : @ViewBag.sonEklenenProjectName</div>
+
+
+@foreach (var item in ViewBag.enCokKullanilanKategori)
+{
+    foreach (var item1 in item)
+    {
+        <div class="alert alert-warning">Projelerde En Çok Kullanılan Kategori : @item1.TblCategory.CategoryName</div>
+        break;
+    }
+    break;
+}
+

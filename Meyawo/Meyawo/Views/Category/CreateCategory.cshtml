@@ -1,0 +1,17 @@
+﻿@model Meyawo.Models.TblCategory
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Kategori Ekle</h2>
+
+<form method="post">
+
+    <label>Kategori Adı</label>
+    <input type="text" name="CategoryName" class="form-control border" />
+    <br />
+    <button class="btn btn-info">Kategori Ekle</button>
+    <a href="/Category/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>

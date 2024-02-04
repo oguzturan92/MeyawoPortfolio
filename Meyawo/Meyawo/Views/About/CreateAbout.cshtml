@@ -1,0 +1,26 @@
+﻿@model Meyawo.Models.TblAbout
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Hakkımda Ekle</h2>
+
+<form method="post">
+
+    <label>Kategori Adı</label>
+    <input type="text" name="Title" class="form-control border" />
+    <br />
+    <label>Kategori Başlık</label>
+    <input type="text" name="Header" class="form-control border" />
+    <br />
+    <label>Kategori ImageUrl</label>
+    <input type="text" name="ImageUrl" class="form-control border" />
+    <br />
+    <label>Kategori Açıklama</label>
+    <textarea rows="4" class="table table-bordered" name="Description"></textarea>
+    <br />
+    <button class="btn btn-info">Hakkımda Ekle</button>
+    <a href="/About/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>

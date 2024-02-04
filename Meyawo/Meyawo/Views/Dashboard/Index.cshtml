@@ -1,0 +1,65 @@
+﻿@*@model List<Meyawo.Models.TblProject>*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="">
+    <div class="widget-box">
+        <a href="/Contact/Index" class="widget bg-primary">
+            <div class="widget-number">@ViewBag.isReadMessageCount</div>
+            <div class="widget-i">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="widget-name">Yeni Mesaj</div>
+        </a>
+        <a href="/Category/Index" class="widget bg-warning">
+            <div class="widget-number">@ViewBag.categoriCount</div>
+            <div class="widget-i">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="widget-name">Kategori</div>
+        </a>
+        <a href="/Project/Index" class="widget bg-dark">
+            <div class="widget-number">@ViewBag.projectCount</div>
+            <div class="widget-i">
+                <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <div class="widget-name">Proje</div>
+        </a>
+        <a href="#" class="widget bg-info">
+            <div class="widget-number">1</div>
+            <div class="widget-i">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="widget-name">Kullanıcı</div>
+        </a>
+    </div>
+</div>
+
+
+<canvas id="myChart" style="width:100%;max-width:800px; margin:auto; margin-top:100px;"></canvas>
+
+<script>
+    const xValues = ["Ziyaretçi", "Gelen Mesaj", "İndirilen Cv", "İndirilen Projeler", "Hata"];
+    const yValues = [53, 49, 44, 24, 15];
+    const barColors = ["red", "green", "blue", "orange", "brown"];
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: "Genel Veriler"
+            }
+        }
+    });
+</script>

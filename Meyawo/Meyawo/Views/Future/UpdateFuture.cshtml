@@ -1,0 +1,27 @@
+﻿@model Meyawo.Models.TblFuture
+@{
+    ViewBag.Title = "UpdateFuture";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Header Düzenle</h2>
+
+<form method="post">
+
+    <label>Header ID</label>
+    <input type="text" name="FutureID" class="form-control border" value="@Model.FutureID" disabled />
+    <input type="hidden" name="FutureID" value="@Model.FutureID" />
+    <br />
+    <label>Header Ana Başlık</label>
+    <input type="text" name="Header" class="form-control border" value="@Model.Header" />
+    <br />
+    <label>Header Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control border" value="@Model.NameSurname" />
+    <br />
+    <label>Header Alt Başlık</label>
+    <input type="text" name="Title" class="form-control border" value="@Model.Title" />
+    <br />
+    <button class="btn btn-info">Header Güncelle</button>
+    <a href="/Future/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>

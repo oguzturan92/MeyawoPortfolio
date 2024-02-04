@@ -1,0 +1,23 @@
+﻿@model Meyawo.Models.TblFuture
+@{
+    ViewBag.Title = "CreateFuture";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Header Ekle</h2>
+
+<form method="post">
+
+    <label>Header Ana Başlık</label>
+    <input type="text" name="Header" class="form-control border" />
+    <br />
+    <label>Header Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control border" />
+    <br />
+    <label>Header Alt Başlık</label>
+    <input type="text" name="Title" class="form-control border" />
+    <br />
+    <button class="btn btn-info">Header Ekle</button>
+    <a href="/Future/Index" class="btn btn-outline-dark">Geri</a>
+
+</form>
